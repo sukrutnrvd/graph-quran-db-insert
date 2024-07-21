@@ -18,17 +18,12 @@ if (!dataType) {
 }
 
 const run = async () => {
-  try {
-    if (dataType === "vertex") {
-      const vertices = getVertices();
-      await createVertices(vertices);
-    } else {
-      const edges = getEdges();
-      await createEdges(edges);
-    }
-  } catch (error) {
-    console.log("Error:", error.message);
-    process.exit();
+  if (dataType === "vertex") {
+    const vertices = getVertices();
+    await createVertices(vertices);
+  } else {
+    const edges = getEdges();
+    await createEdges(edges);
   }
 };
 

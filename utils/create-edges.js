@@ -1,5 +1,6 @@
 const g = require("./gremlin-client");
 const wait = require("./wait");
+const fs = require("fs");
 
 module.exports = async (edges) => {
   for (let i = 0; i < edges.length; i++) {
